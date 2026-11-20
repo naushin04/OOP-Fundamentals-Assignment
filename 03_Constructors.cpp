@@ -3,38 +3,56 @@
 #include <string>
 using namespace std;
 
-class Student {
+class Student
+{
 private:
     string name;
-    int id;
+    int studentID;
 
 public:
-    // Default Constructor
-    Student() {
+    // Task 1: This is the default constructor.
+    // Task 2: It is called when an object is created without arguments.
+    Student()
+    {
         name = "Unknown";
-        id = 0;
+        studentID = 0;
     }
 
-    // Parameterized Constructor
-    Student(string n, int i) {
+    // Task 1: This is the parameterized constructor.
+    // Task 2: It is called when values are passed during object creation.
+    Student(string n, int id)
+    {
         name = n;
-        id = i;
+        studentID = id;
     }
 
-    void display() {
-        cout << name << " " << id << endl;
+    void display()
+    {
+        cout << "Name: " << name << endl;
+        cout << "Student ID: " << studentID << endl;
     }
 };
 
-int main() {
-    Student s1;
-    Student s2("Rahim", 210601);
-    Student s3("Karim", 210602);
-    Student s4("Nusrat", 210603);
+int main()
+{
+    Student s1; // Calls the default constructor.
 
+    // Task 3: These three objects use the parameterized constructor.
+    Student s2("Naushin", 25004);
+    Student s3("Raty", 25057);
+    Student s4("Oishe", 25006);
+
+    // Task 4: Each object stores its own information.
+    cout << "Default Object:" << endl;
     s1.display();
+
+    cout << "\nStudent 1:" << endl;
     s2.display();
+
+    cout << "\nStudent 2:" << endl;
     s3.display();
+
+    cout << "\nStudent 3:" << endl;
     s4.display();
 
     return 0;
